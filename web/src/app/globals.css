@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0d1b2a;
+  --color-foreground: #e0e1dd;
+  --color-card: #1b263b;
+  --color-card-foreground: #e0e1dd;
+  --color-popover: #1b263b;
+  --color-popover-foreground: #e0e1dd;
+  --color-primary: #415a76;
+  --color-primary-foreground: #e0e1dd;
+  --color-secondary: #0d1b2a;
+  --color-secondary-foreground: #e0e1dd;
+  --color-muted: #1b263b;
+  --color-muted-foreground: #778da9;
+  --color-accent: #778da9;
+  --color-accent-foreground: #0d1b2a;
+  --color-destructive: #f44336;
+  --color-destructive-foreground: #e0e1dd;
+  --color-border: rgba(119, 141, 169, 0.2);
+  --color-input: rgba(119, 141, 169, 0.1);
+  --color-ring: #778da9;
+}
+
+@layer base {
+  body {
+    background: radial-gradient(circle at top right, #1b263b, #0d1b2a);
+    min-height: 100vh;
+    color: #e0e1dd;
+    font-family: sans-serif;
+  }
+}
+
+.glass {
+  background: rgba(27, 38, 59, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(119, 141, 169, 0.2);
+  border-radius: 1rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #e0e1dd 0%, #778da9 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-premium {
+  background: linear-gradient(135deg, #415a76 0%, #1b263b 100%);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(119, 141, 169, 0.3);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(65, 90, 118, 0.5);
+  border-color: rgba(119, 141, 169, 0.6);
+}
+
+.input-premium {
+  background: rgba(13, 27, 42, 0.5);
+  border: 1px solid rgba(119, 141, 169, 0.2);
+  color: #e0e1dd;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+
+.input-premium:focus {
+  outline: none;
+  border-color: #778da9;
+  box-shadow: 0 0 0 2px rgba(119, 141, 169, 0.1);
+}
